@@ -1,0 +1,9 @@
+main:
+    movq $0, %rsi
+    top_of_loop:
+        callq printf
+        incq %rsi
+        cmpq $100, %rsi
+        jl top_of_loop
+    movq $200, %rax
+    ret
